@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  
   resources :welcomes
   devise_for :users
   root to: "welcomes#index"
+  get 'my_portfolio', to: "users#my_portfolio"
+  get 'search_stocks', to: "stocks#search"
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
